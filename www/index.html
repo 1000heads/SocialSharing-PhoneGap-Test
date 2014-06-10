@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SocialSharing Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
+</head>
+
+<body>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="architect://architect.js"></script>
+    <script type="text/javascript">
+    var app = {
+
+        initialize: function() {
+            document.addEventListener('deviceready', this.onDeviceReady, false);
+        },
+
+        onDeviceReady: function() {
+            window.plugins.socialsharing.share('Test Message');
+        }
+    };
+
+    app.initialize();
+    </script>
+</body>
+</html>
